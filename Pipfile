@@ -10,6 +10,8 @@ matplotlib = "*"
 scikit-learn = "*"
 plotly = "*"
 mplcursors = "*"
+pydotplus = "*"
+graphviz = "*"
 
 [dev-packages]
 
