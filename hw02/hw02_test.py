@@ -33,7 +33,7 @@ def tree(times, df2, train_X, test_X, train_y, test_y, num):
         criterion='entropy', max_leaf_nodes=num)  # 建立模型 max_leaf_nodes為最大葉節點個數
     clf.fit(train_X, train_y)  # 訓練模型
     pred_y = clf.predict(test_X)
-    print(f"正確率為: {accuracy_score(test_y, pred_y)}")
+    # print(f"正確率為: {accuracy_score(test_y, pred_y)}")
     if (accuracy_score(test_y, pred_y) == 1.0):
         display(times, df2, clf, train_X, test_X, train_y, test_y)
 
@@ -43,7 +43,7 @@ def display(times, df2, clf, train_X, test_X, train_y, test_y):
     if (times[0] == 2):
         times[0] = 0
         return
-    print(f"Times: {times[0]}")
+    #print(f"Times: {times[0]}")
     io = StringIO()
     file_name = 'decision_tree.png'
     #columns_names = df2.columns
@@ -94,6 +94,7 @@ def main():
     print(f"train_y: {train_y}")
     print(f"訓練集的維度大小: {train_X.shape}")
     print(f"測試集的維度大小: {test_X.shape}")
+    print(train_y)
     print(df.head())
     for i in range(2, 10):
         tree(times, df2, train_X, test_X, train_y, test_y, i)  # 找出正確錄最高的最大葉節點個數
