@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+numpy = "*"
+pandas = "*"
+matplotlib = "*"
+plotly = "*"
+mplcursors = "*"
+pydotplus = "*"
+graphviz = "*"
+scikit-multilearn = "*"
+scikit-learn = "==0.24.1"
+xgboost = "*"
+imbalanced-learn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
